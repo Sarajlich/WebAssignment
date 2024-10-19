@@ -20,7 +20,8 @@ body{
 .trislike{
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 h2{
@@ -149,4 +150,6 @@ footer {
 
 .yt_laptop {
     flex: 1;
+    max-width: 100%;
+    height: auto;
 }
