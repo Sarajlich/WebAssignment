@@ -35,37 +35,50 @@
         </div>
         
         <div class="form1">
-            <form action="login.html">
+            <form action="https://jsonplaceholder.typicode.com/posts" target="_blank" method="post">
             <fieldset style="width: 300px;">
                 <br>
                 <label>Name: </label>
-                <input type="text">
+                <input type="text" id="name" name="name">
                 <br><br><br>
                 <label>Username: </label>
-                <input type="text" required>
+                <input type="text" id="username" name="username" required minlength="3" required>
                 <br><br><br>
                 <label>Email: </label>
-                <input type="email" required>
+                <input type="email" id="email" name="email" required>
                 <br><br><br>
                 <label>Password: </label>
-                <input type="password" required>
+                <input type="password" id="password" name="password" required minlength="5">
                 <br><br><br>
                 <label>Age: </label>
-                <input type="number">
+                <input type="number" id="age" name="age" min="0" max="120">
                 <br><br><br>
                 <label>Phone number: </label>
-                <input type="tel">
+                <input type="tel" id="phone" name="phone">
                 <br><br><br>
                 <label>Gender: </label>
                 <select>
-                    <option></option>
-                    <option>Male</option>
-                    <option>Female</option>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
                 </select><br><br>
+                <label for="bio">Bio:</label><br>
+                <textarea id="bio" name="bio" rows="4" cols="40"></textarea>
+                <br><br><br>
+                <center>
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the terms and conditions<br>
+                    <br><a href="kontakt.html#target-section" target="_blank">Check out "Terms and Conditions" by clicking here</a>
+                </label><br>
+                </center>
+
             </fieldset>
                 <br>
                 <center>
-                    <input type="Submit" value="Sign up" style="color: rgb(2, 21, 37); background-color: white; font-size: 15px; padding: 10px 20px; border-radius: 8px; border: none; font-family: Arial, Helvetica, sans-serif;">
+                    <a href="login.html">
+                        <input type="Submit" value="Sign up" style="color: rgb(2, 21, 37); background-color: white; font-size: 15px; padding: 10px 20px; border-radius: 8px; border: none; font-family: Arial, Helvetica, sans-serif;">
+                    </a>
                 </center>
             </form>
         </div>
