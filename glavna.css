@@ -1,8 +1,8 @@
 .logo {
     position: absolute;
-    top: 20px;
+    top: 0px;
     left: 20px; 
-	width: 170px;
+	width: 130px;
     z-index: 1; 
 }
 
@@ -57,7 +57,7 @@ h2{
   display: none;
   position: absolute;
   right: 0;
-  background-color:  rgba(0,0,0,0.2);
+  background-color:  rgba(3, 2, 12, 0.727);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
@@ -156,4 +156,13 @@ footer {
     flex: 1;
     max-width: 100%;
     height: auto;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(2, 18, 31);
+    z-index: 1000;
 }
