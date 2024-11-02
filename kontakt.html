@@ -120,8 +120,30 @@
                 <td>€30 - €75</td>
                 <td>Standard, Express</td>
             </tr>
-        </table>
-        <br><br><br>
+        </table><br><br>
+        
+        <div class="GeolocationAPI">
+            <button onclick="getLocation()" style="font-size: 14px; border-radius: 8px; padding: 5px;"> CHECK YOUR LOCATION </button>
+            <p id="demo"></p>
+            <script>
+                const x = document.getElementById("demo");
+
+                function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+                }
+
+                function showPosition(position) {
+                    x.innerHTML = "Latitude: " + position.coords.latitude + 
+                    "<br>Longitude: " + position.coords.longitude;
+                }
+            </script>
+        </div>
+
+        <br>
         <div class="terms">
             <br><br>
             <h2 id="target-section">Terms and Conditions:</h2>
