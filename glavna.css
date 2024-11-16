@@ -281,3 +281,18 @@ footer {
     object-fit: cover;
     margin: 0 auto;
 }
+
+.star {
+    font-size: 24px;
+    cursor: pointer;
+    color: gold;
+}
+.star.dragging {
+    opacity: 0.5;
+}
+.card-rating {
+    min-height: 50px;
+    border: 1px dashed #ccc;
+    text-align: center;
+    line-height: 50px;
+}
