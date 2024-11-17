@@ -296,3 +296,16 @@ footer {
     text-align: center;
     line-height: 50px;
 }
+
+#dugme {
+    background-color: rgb(62, 9, 112);
+    border-color: black;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#dugme:hover {
+    background-color: rgb(100, 20, 150);
+    border-color: rgb(80, 15, 130);
+    color: white;
+}
