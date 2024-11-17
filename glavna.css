@@ -51,7 +51,7 @@ h2{
     color: rgb(255, 255, 255);
 }
 
-.image-wrapper {
+.image-wrapperr {
     flex: 1 1 30%;
     text-align: center;
     box-sizing: border-box;
@@ -64,8 +64,17 @@ h2{
 
 /*resp. 4 glavna & glavna_signed_in --> 3 slike*/
 @media (max-width: 768px) {
-    .image-wrapper {
+
+    .trislike{
+        padding: 0px;
+    }
+    .image-wrapperr {
         flex: 1 1 100%;
+        max-width: 300px !important;
+        margin: auto;
+    }
+    .image-wrapperr img{
+        max-width: 300px !important;
     }
     
     h2 {
@@ -165,8 +174,8 @@ h2{
     
     .dropdown2 {
         width: 100%;
-        right: 0;
-        left: 0;
+       /* right: 0;
+        left: 0; */
         text-align: center;
     }
 
@@ -271,4 +280,32 @@ footer {
     max-height: 350px;
     object-fit: cover;
     margin: 0 auto;
+}
+
+.star {
+    font-size: 24px;
+    cursor: pointer;
+    color: gold;
+}
+.star.dragging {
+    opacity: 0.5;
+}
+.card-rating {
+    min-height: 50px;
+    border: 1px dashed #ccc;
+    text-align: center;
+    line-height: 50px;
+}
+
+#dugme {
+    background-color: rgb(62, 9, 112);
+    border-color: black;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#dugme:hover {
+    background-color: rgb(100, 20, 150);
+    border-color: rgb(80, 15, 130);
+    color: white;
 }

@@ -164,16 +164,16 @@
                 }
 
                 function showPosition(position) {
-                    x.innerHTML = "Latitude: " + position.coords.latitude + 
+                    x.innerHTML = "<br>Latitude: " + position.coords.latitude + 
                     "<br>Longitude: " + position.coords.longitude;
                 }
             </script>
         </div>
-
-        <br>
+        <div id="target-section"></div>
+        <br><br><br><br>
         <div class="terms">
             <br><br>
-            <h2 id="target-section">Terms and Conditions:</h2>
+            <h2>Terms and Conditions:</h2>
             <ol>
                 <li>Acceptance of Terms</li>
                 <p>By using this website, you agree to these Terms and Conditions in full. If you do not agree, please do not use our site.</p>
@@ -199,6 +199,72 @@
                 <p>These terms are governed by the laws of Bosnia and Herzegovina. Any disputes will be resolved in accordance with these laws.</p>
             </ol>
         </div><br><br>
+        <br><br><br>
+
+      <center>
+        <div class="container mt-4">
+
+              <div class="col-md-4">
+                  <div class="card p-3">
+                      <div id="star-container">
+                        <center>
+                          <span class="star" draggable="true" data-value="1">★</span>
+                          <span class="star" draggable="true" data-value="2">★</span>
+                          <span class="star" draggable="true" data-value="3">★</span>
+                          <span class="star" draggable="true" data-value="4">★</span>
+                          <span class="star" draggable="true" data-value="5">★</span>
+                        </center>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <div class="col-md-8">
+                      <div class="col-md-6 mb-4">
+                          <div class="card">
+                              <div class="card-body">
+                                  <h5 class="card-title" style="text-align: center;">Leave a rating</h5>
+                                  <div class="card-rating" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+        </div>
+      </center>
+      <script>
+          const stars = document.querySelectorAll('.star');
+      
+          stars.forEach(star => {
+              star.addEventListener('dragstart', event => {
+                  event.dataTransfer.setData('text', star.dataset.value);
+                  event.target.classList.add('dragging');
+              });
+      
+              star.addEventListener('dragend', event => {
+                  event.target.classList.remove('dragging');
+              });
+          });
+      
+          function allowDrop(event) {
+              event.preventDefault();
+          }
+      
+          function drop(event) {
+              event.preventDefault();
+              const value = event.dataTransfer.getData('text');
+              const ratingContainer = event.target;
+
+              ratingContainer.innerHTML = '';
+
+              for (let i = 0; i < value; i++) {
+                  const newStar = document.createElement('span');
+                  newStar.textContent = '★';
+                  newStar.classList.add('star');
+                  ratingContainer.appendChild(newStar);
+              }
+          }
+      </script>
+
+
         <br><br><br>
         <center>
             <footer>
