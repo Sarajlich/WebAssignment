@@ -309,3 +309,8 @@ footer {
     border-color: rgb(80, 15, 130);
     color: white;
 }
+
+.map-container {
+    display: none;
+    margin-top: 15px;
+}
