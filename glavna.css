@@ -326,3 +326,36 @@ body.dark{
     background-color: rgb(3, 1, 15);
     color:white
 }
+
+.expandable-box {
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #222;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .expand-btn {
+    width: 100%;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .expand-btn:hover {
+    background-color: #555;
+  }
+  
+  .expand-content {
+    padding: 10px;
+    display: none;
+  }
+  
+  .expand-btn.active + .expand-content {
+    display: block;
+  }

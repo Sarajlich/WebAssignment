@@ -226,6 +226,23 @@
                 <p>These terms are governed by the laws of Bosnia and Herzegovina. Any disputes will be resolved in accordance with these laws.</p>
             </ol>
         </div><br><br>
+        <center>
+            <div class="expandable-box" style="width: 300px;">
+                <button class="expand-btn" style="text-align: center;"><b>Return Policy</b></button>
+                <div class="expand-content">
+                <p>You can return products within 30 days of purchase with no questions asked.</p>
+                </div>
+            </div>
+        </center>
+        <script>
+            document.querySelectorAll('.expand-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    button.classList.toggle('active');
+                    const content = button.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        </script>
         <br><br><br>
 
       <center>
