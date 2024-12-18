@@ -31,6 +31,7 @@ a:hover{
 
 body{
     background-color: rgb(2, 21, 37);
+    color: black;
 }
 
 .no-underline {
@@ -313,4 +314,15 @@ footer {
 .map-container {
     display: none;
     margin-top: 15px;
+}
+
+.themeSwitcher{
+    display:flex;
+    gap:10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+body.dark{
+    background-color: rgb(3, 1, 15);
+    color:white
 }
