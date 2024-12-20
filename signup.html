@@ -42,7 +42,7 @@
         </div>
         
         <div class="form1" style="margin-top: 200px;">
-            <form action="https://jsonplaceholder.typicode.com/posts" target="_blank" method="post">
+            <form id="signupForm">
             <fieldset style="width: 280px;">
                 <br>
                 <label>Name: </label>
@@ -89,9 +89,16 @@
                     <a href="login.html">
                         <input type="Submit" value="Sign up" style="color: rgb(2, 21, 37); background-color: white; font-size: 15px; padding: 10px 20px; border-radius: 8px; border: none; font-family: Arial, Helvetica, sans-serif;">
                     </a>
+                    <div id="successMessage" style="display: none; color: green; text-align: center; font-weight: bold; margin-top: 20px;">
+                        Your data has been successfully submitted!
+                    </div><br>
                 </center>
             </form>
+            
+            
+        </div>
             <script>
+                //password strength indicator bar
                 const passwordInput = document.getElementById('password');
                 const strengthBar = document.getElementById('strength-bar').firstElementChild;
                 const strengthMessage = document.getElementById('strength-message');
@@ -121,8 +128,31 @@
                     const colors = ["black", "red", "orange", "yellow", "green"];
                     return colors[strength];
                 }
+
+                
+                //AJAX for submission
+                document.getElementById('signupForm').addEventListener('submit', function(event) {
+                    event.preventDefault(); 
+
+                    const formData = new FormData(this);
+
+                    fetch('https://jsonplaceholder.typicode.com/posts', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('successMessage').style.display = 'block';
+                        setTimeout(() => {
+                            window.location.href = "login.html";
+                        }, 3000);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                });
             </script>
-        </div>
+        
         <br><br><br>
         <center>
             <footer>
