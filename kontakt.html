@@ -324,8 +324,29 @@
                 dataType: 'json',
                 success: function(data) {
                     let commentsList = $('#comments-list');
-                    data.forEach(function(comment) {
-                        commentsList.append('<li><strong>' + comment.username + ':</strong> ' + comment.comment + '</li>');
+                    data.forEach(function (comment, index) {
+                        commentsList.append(`
+                            <li data-index="${index}">
+                                <strong>${comment.username}:</strong> 
+                                <span class="comment-text">${comment.comment}</span>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </li>
+                        `);
+                    });
+                    commentsList.on('click', '.delete-btn', function () {
+                        let listItem = $(this).closest('li');
+                        listItem.remove();
+                        alert('Komentar uspješno obrisan!');
+                    });
+                    commentsList.on('click', '.edit-btn', function () {
+                        let listItem = $(this).closest('li');
+                        let commentText = listItem.find('.comment-text');
+                        let newComment = prompt('Unesite novi komentar:', commentText.text());
+                        if (newComment) {
+                            commentText.text(newComment);
+                            alert('Komentar uspješno izmijenjen!');
+                        }
                     });
                 },
             });
