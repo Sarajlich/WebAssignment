@@ -31,7 +31,7 @@ a:hover{
 
 body{
     background-color: rgb(2, 21, 37);
-    color: black;
+    color: white;
 }
 
 .no-underline {
@@ -397,3 +397,11 @@ body.dark{
   #error {
     color: red;
   }  
+
+  #comments-list li {
+    margin: 10px 0;
+    width: 100%;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+  }

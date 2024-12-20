@@ -1,3 +1,4 @@
+//news glavnasi
 const apiKey = "808302eb5e144b068121feb0622f53e7";
 const fetchNewsButton = document.getElementById("fetchNews");
 const newsResult = document.getElementById("newsResult");
