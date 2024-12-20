@@ -405,3 +405,31 @@ body.dark{
     padding: 10px;
     border-radius: 5px;
   }
+
+#comments-list .edit-btn {
+    background-color: #393939;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    width: 70px;
+    margin-left: 20px;
+}
+
+#comments-list .edit-btn:hover {
+    background-color: #1b1a1a;
+}
+
+#comments-list .delete-btn {
+    background-color: #393939;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    width: 70px;
+    margin-left: 10px;
+}
+
+#comments-list .delete-btn:hover {
+    background-color: #1b1a1a;
+}
