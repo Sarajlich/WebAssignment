@@ -433,3 +433,58 @@ body.dark{
 #comments-list .delete-btn:hover {
     background-color: #1b1a1a;
 }
+
+.acc1 {
+    width: 100%;
+}
+
+.acc1 .bcc1 {
+    position: relative;
+    margin: 15px 20px;
+}
+
+.acc1 .bcc1 .naslov1{
+    position: relative;
+    padding: 13px;
+    background-color: #404042;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.acc1 .bcc1 .naslov1::before{
+    content: '\25BC';;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.acc1 .bcc1.active .naslov1::before{
+    content: '\25B2';;
+}
+
+.acc1 .bcc1 .sadrzaj {
+    position: relative;
+    background-color: #1e1e1e;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.acc1 .bcc1.active .sadrzaj{
+    height: 100px;
+    padding: 10px;
+}
+
+.sadrzaj p{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.naslov1 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
