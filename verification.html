@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GAMING SHOP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  href="glavna.css">
+    </head>
+    <body>
+        <div class="fixed">
+            <center>
+                <header>
+                    <h1>GAMING SHOP</h1>
+                </header>
+            </center>
+            <div class="logo-container">
+                <img src="logo.png" alt="logo" width="100px" class="logo">
+            </div>
+        </div>
+
+        <div class="form1" style="margin-top: 200px;">
+            <form id="verification" onsubmit="return verifyCode();">
+                <fieldset style="width: 280px;">
+                
+                    <h3>Enter the text</h3>
+                    <img src="brojevi.png">
+                    <br><br>
+                    
+                    <input type="text" id="name" name="name" placeholder="Enter the code" style="width: 435px;">
+                    <br><br>
+                    <center>
+                        <button id="submit" style="padding: 10px 20px; background-color: rgb(38, 121, 193); color: white; font-weight: bold; border-radius: 10px; border: 0; font-size: 15px;" >Verify</button>
+                    </center>
+                
+                </fieldset>
+            </form>
+        </div>
+           
+        <br><br><br>
+        <center>
+            <footer>
+                <p>&copy; Fundations of Web Development - Muhamed Sarajlic</p>
+            </footer>
+        </center>
+        <script>
+            function verifyCode() {
+                const code = document.getElementById("name").value;
+                const validCode = "v6t9jbcds";
+                const validCode2 = "V6T9JBCDS";
+                if (code === validCode || code === validCode2) {
+                    window.location.href = "signup.html";
+                    return false;
+                } else {
+                    alert("Invalid code. Please try again.");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

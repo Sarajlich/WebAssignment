@@ -4,6 +4,7 @@
         <title>GAMING SHOP - CONTACT</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet"  href="glavna.css">
         
@@ -38,10 +39,15 @@
                 </nav>
             </nav>
         </div>
-        <br><br><br><br><br><br><br>
+        <br><br><br><br>
+        <div class="themeSwitcher">
+            <button id="light" style="background-color: rgb(2, 18, 31); margin-top: 80px; border-radius: 8px; width: 100px; color: white; font-weight: bold; padding-bottom: 5px; padding-top: 5px;">LIGHT</button>
+            <button id="dark" style="background-color: rgb(2, 18, 31); margin-top: 80px; border-radius: 8px; width: 100px; color: white; font-weight: bold; padding-bottom: 5px; padding-top: 5px;">DARK</button>
+        </div>
+        
 
         <article class="aboutus">
-            <br><br><br>
+            <br><br>
             <h2>About us</h2>
             <p>Welcome to Gaming Shop, where our passion for gaming meets top-notch equipment! 
                 Based in the heart of Sarajevo, Bosnia and Herzegovina, we are dedicated to 
@@ -66,16 +72,37 @@
             </p>
             <br><br><br>
             <div class="container my-4">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d658.3791619017959!2d18.407065189071606!3d43.85554016654888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c8df2f1ac38d%3A0xd8243c0057db65db!2sMarijin%20Dvor!5e1!3m2!1sen!2sba!4v1731355497933!5m2!1sen!2sba" 
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                      </iframe>
+                <center>
+                    <button onclick="toggleMap()" style="color: rgb(2, 21, 37); border: 0; border-radius: 10px; width: 250px; height: 40px; cursor: pointer; font-size: 16px; font-weight: BOLD;"><i>MAP</i></button>
+                    <br><br>
+                </center>
+                <div id="map" class="map-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d658.3791619017959!2d18.407065189071606!3d43.85554016654888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c8df2f1ac38d%3A0xd8243c0057db65db!2sMarijin%20Dvor!5e1!3m2!1sen!2sba!4v1731355497933!5m2!1sen!2sba" 
+                                  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </div>
+      
+            <script>
+                function toggleMap() {
+                    const mapContainer = document.getElementById("map");
+                    const button = document.querySelector("button");
+        
+                    if (mapContainer.style.display === "none" || mapContainer.style.display === "") {
+                        mapContainer.style.display = "block";
+                        button.textContent = "Hide Map";
+                    } else {
+                        mapContainer.style.display = "none";
+                        button.textContent = "Show Map";
+                    }
+                }
+            </script>
               
             <br><br><br>
             <h2>What we offer:</h2>
@@ -93,62 +120,62 @@
         <p style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 17px; margin-left: 8%; margin-right: 8%;">NOTE: shipping is free for all orders above 600€</p>
         <div class="container my-4">
             <table class="table table-bordered table-striped table-responsive-sm">
-              <thead>
-                <tr>
-                  <th>REGION</th>
-                  <th>Estimated Delivery Time</th>
-                  <th>Shipping Costs</th>
-                  <th>Available Shipping Methods</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>APAC</td>
-                  <td>7-14 business days</td>
-                  <td>€20 - €50</td>
-                  <td>Standard, Express</td>
-                </tr>
-                <tr>
-                  <td>EU</td>
-                  <td>3-7 business days</td>
-                  <td>€5 - €15</td>
-                  <td>Standard, Express</td>
-                </tr>
-                <tr>
-                  <td>CIS</td>
-                  <td>7-14 business days</td>
-                  <td>€25 - €60</td>
-                  <td>Standard, Express</td>
-                </tr>
-                <tr>
-                  <td>NA</td>
-                  <td>7-14 business days</td>
-                  <td>€30 - €70</td>
-                  <td>Standard, Express</td>
-                </tr>
-                <tr>
-                  <td>LATAM</td>
-                  <td>10-20 business days</td>
-                  <td>€35 - €80</td>
-                  <td>Standard, Express</td>
-                </tr>
-                <tr>
-                  <td>MEA</td>
-                  <td>7-14 business days</td>
-                  <td>€25 - €50</td>
-                  <td>Standard, Express</td>
-                </tr>
-                <tr>
-                  <td>OCEANIA</td>
-                  <td>10-20 business days</td>
-                  <td>€30 - €75</td>
-                  <td>Standard, Express</td>
-                </tr>
-              </tbody>
+                <thead>
+                    <tr>
+                    <th>REGION</th>
+                    <th>Estimated Delivery Time</th>
+                    <th>Shipping Costs</th>
+                    <th>Available Shipping Methods</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>APAC</td>
+                    <td>7-14 business days</td>
+                    <td>€20 - €50</td>
+                    <td>Standard, Express</td>
+                    </tr>
+                    <tr>
+                    <td>EU</td>
+                    <td>3-7 business days</td>
+                    <td>€5 - €15</td>
+                    <td>Standard, Express</td>
+                    </tr>
+                    <tr>
+                    <td>CIS</td>
+                    <td>7-14 business days</td>
+                    <td>€25 - €60</td>
+                    <td>Standard, Express</td>
+                    </tr>
+                    <tr>
+                    <td>NA</td>
+                    <td>7-14 business days</td>
+                    <td>€30 - €70</td>
+                    <td>Standard, Express</td>
+                    </tr>
+                    <tr>
+                    <td>LATAM</td>
+                    <td>10-20 business days</td>
+                    <td>€35 - €80</td>
+                    <td>Standard, Express</td>
+                    </tr>
+                    <tr>
+                    <td>MEA</td>
+                    <td>7-14 business days</td>
+                    <td>€25 - €50</td>
+                    <td>Standard, Express</td>
+                    </tr>
+                    <tr>
+                    <td>OCEANIA</td>
+                    <td>10-20 business days</td>
+                    <td>€30 - €75</td>
+                    <td>Standard, Express</td>
+                    </tr>
+                </tbody>
             </table>
-          </div>
-          <br><br>
-        
+        </div>
+        <br><br>
+        <center>
         <div class="GeolocationAPI">
             <button onclick="getLocation()" style="font-size: 14px; border-radius: 8px; padding: 5px;"> CHECK YOUR LOCATION </button>
             <p id="demo"></p>
@@ -169,6 +196,7 @@
                 }
             </script>
         </div>
+        </center>
         <div id="target-section"></div>
         <br><br><br><br>
         <div class="terms">
@@ -199,10 +227,27 @@
                 <p>These terms are governed by the laws of Bosnia and Herzegovina. Any disputes will be resolved in accordance with these laws.</p>
             </ol>
         </div><br><br>
+        <center>
+            <div class="expandable-box" style="width: 300px;">
+                <button class="expand-btn" style="text-align: center;"><b>Return Policy</b></button>
+                <div class="expand-content">
+                <p>You can return products within 30 days of purchase with no questions asked.</p>
+                </div>
+            </div>
+        </center>
+        <script>
+            document.querySelectorAll('.expand-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    button.classList.toggle('active');
+                    const content = button.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        </script>
         <br><br><br>
 
-      <center>
-        <div class="container mt-4">
+        <center>
+            <div class="container mt-4">
 
               <div class="col-md-4">
                   <div class="card p-3">
@@ -228,41 +273,137 @@
                           </div>
                       </div>
               </div>
+            </div>
+        </center>
+        <script>
+            const stars = document.querySelectorAll('.star');
+      
+            stars.forEach(star => {
+                star.addEventListener('dragstart', event => {
+                    event.dataTransfer.setData('text', star.dataset.value);
+                    event.target.classList.add('dragging');
+                });
+      
+                star.addEventListener('dragend', event => {
+                    event.target.classList.remove('dragging');
+                });
+            });
+      
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+      
+            function drop(event) {
+                event.preventDefault();
+                const value = event.dataTransfer.getData('text');
+                const ratingContainer = event.target;
+
+                ratingContainer.innerHTML = '';
+
+                for (let i = 0; i < value; i++) {
+                    const newStar = document.createElement('span');
+                    newStar.textContent = '★';
+                    newStar.classList.add('star');
+                    ratingContainer.appendChild(newStar);
+                }
+            }
+        </script>
+
+
+        <br><br><br>
+        
+        <h4 style="color: white; font-family: Arial, Helvetica, sans-serif; font-weight: bold; margin-left: 20px;">Comments</h4>
+        <ul id="comments-list" style="margin-left: 20px; align-items: left; margin-right: 40px;"></ul>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            
+            $.ajax({
+                url: 'data.json',
+                method: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    let commentsList = $('#comments-list');
+                    data.forEach(function (comment, index) {
+                        commentsList.append(`
+                            <li data-index="${index}">
+                                <strong>${comment.username}:</strong> 
+                                <span class="comment-text">${comment.comment}</span>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </li>
+                        `);
+                    });
+                    commentsList.on('click', '.delete-btn', function () {
+                        let listItem = $(this).closest('li');
+                        listItem.remove();
+                        alert('Komentar uspješno obrisan!');
+                    });
+                    commentsList.on('click', '.edit-btn', function () {
+                        let listItem = $(this).closest('li');
+                        let commentText = listItem.find('.comment-text');
+                        let newComment = prompt('Unesite novi komentar:', commentText.text());
+                        if (newComment) {
+                            commentText.text(newComment);
+                            alert('Komentar uspješno izmijenjen!');
+                        }
+                    });
+                },
+            });
+        </script>
+        <br><br><br>
+
+        <center>
+            <div class="galerija">
+                <img src="hyperx.png" class="thumbnail" style="width: 20%;">
+                <img src="razer.png" class="thumbnail" style="width: 20%;">
+                <img src="aoc.png" class="thumbnail" style="width: 8%;">
+                <img src="asus.png" class="thumbnail" style="width: 19%;">
+            </div>
+        </center>
+        <div id="mmm" class="mmm">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage" style="margin-top: 60px;">
         </div>
-      </center>
-      <script>
-          const stars = document.querySelectorAll('.star');
-      
-          stars.forEach(star => {
-              star.addEventListener('dragstart', event => {
-                  event.dataTransfer.setData('text', star.dataset.value);
-                  event.target.classList.add('dragging');
-              });
-      
-              star.addEventListener('dragend', event => {
-                  event.target.classList.remove('dragging');
-              });
-          });
-      
-          function allowDrop(event) {
-              event.preventDefault();
-          }
-      
-          function drop(event) {
-              event.preventDefault();
-              const value = event.dataTransfer.getData('text');
-              const ratingContainer = event.target;
 
-              ratingContainer.innerHTML = '';
+        <script>
+            $(".thumbnail").click(function () {
+                $("#mmm").show(); 
+                $("#modalImage").attr("src", $(this).attr("src"));
+            });
 
-              for (let i = 0; i < value; i++) {
-                  const newStar = document.createElement('span');
-                  newStar.textContent = '★';
-                  newStar.classList.add('star');
-                  ratingContainer.appendChild(newStar);
-              }
-          }
-      </script>
+            $(".close").click(function () {
+                $("#mmm").hide(); 
+            });
+        </script>
+
+        <style>      
+            .mmm {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }  
+            .modal-content {
+                display: block;
+                margin: auto;
+                max-width: 80%;
+                max-height: 80%;
+            }
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: white;
+                font-size: 30px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        </style>
 
 
         <br><br><br>
@@ -272,6 +413,7 @@
                 <p>&copy; Fundations of Web Development - Muhamed Sarajlic</p>
             </footer>
         </center>
+        <script src="script.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9k/ScQsAP7hUibX38jENuPSgGP0KPj7lj4WfP" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

@@ -38,7 +38,12 @@
         </div>
         <br><br><br><br><br><br><br>
 
-            <br><br><h2 style="font-family: Arial, Helvetica, sans-serif; margin-top: 90px; text-align: center;">SOFTWARE</h2><br><br><br>
+            <br><br><h2 style="font-family: Arial, Helvetica, sans-serif; margin-top: 90px; text-align: center;">SOFTWARE</h2>
+            <div class="themeSwitcher">
+                <button id="light" style="background-color: rgb(2, 18, 31); margin-top: 30px; border-radius: 8px; width: 100px; color: white; font-weight: bold; padding-bottom: 5px; padding-top: 5px;">LIGHT</button>
+                <button id="dark" style="background-color: rgb(2, 18, 31); margin-top: 30px; border-radius: 8px; width: 100px; color: white; font-weight: bold; padding-bottom: 5px; padding-top: 5px;">DARK</button>
+            </div>
+            <br><br><br>
         
         <center>
             <div class="trislike">
@@ -57,6 +62,28 @@
                 
             </div>
         </center>
+        <br><br><br>
+        <div class="acc1">
+            <div class="bcc1">
+                <div class="naslov1">Kako instalirati software?</div>
+                <div class="sadrzaj">
+                    <p>Da biste instalirali naš software, jednostavno preuzmite instalacijsku datoteku s naše web stranice i pratite korake instalacije. Ako naiđete na problem, tu je naš vodič za instalaciju.</p>
+                </div>
+            </div>
+            <div class="bcc1">
+                <div class="naslov1">Koji su sistemski zahtjevi?</div>
+                <div class="sadrzaj">
+                    <p>Naš software radi na Windows 10/11 i macOS verzijama 10.15 ili novijim, uz minimalno 4 GB RAM-a i 500 MB slobodnog prostora na disku.</p>
+                </div>
+            </div>
+            <div class="bcc1">
+                <div class="naslov1">Mogu li koristiti software na više uređaja?</div>
+                <div class="sadrzaj">
+                    <p>Da, ali će vam trebati aktivna licenca za svaki uređaj. Kontaktirajte nas ako želite više licenci.</p>
+                </div>
+            </div>
+        </div>
+        
         <br><br><br>
         <center>
             <div class="trislike">
@@ -79,5 +106,14 @@
         <footer style="text-align: center;">
             <p>&copy; Fundations of Web Development - Muhamed Sarajlic</p>
         </footer>
+        <script>
+            const acc1 = document.getElementsByClassName('bcc1');
+            for(i=0; i<acc1.length; i++){
+                acc1[i].addEventListener('click', function(){
+                    this.classList.toggle('active')
+                })
+            }
+        </script>
+        <script src="script.js"></script>
     </body>
 </html>
